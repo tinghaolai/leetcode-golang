@@ -29,7 +29,7 @@ Memory Usage: 4.7 MB, less than 15.80% of Go online submissions for Remove Dupli
 * 迴圈結束，回傳 last + 1
 
 
-** Comment **
+**Comment**
 
 * last 的每次操作都要再額外加一，其實就是 current 的意思，既然這樣，不如直接設置成 1，避免可讀性降低
 * 只要出現任意一次的「重複元素」，在跑完第二個迴圈後，下次進入迴圈時，仍需要判斷數值是否相同，因此之後每次必然會進入第二個迴圈
