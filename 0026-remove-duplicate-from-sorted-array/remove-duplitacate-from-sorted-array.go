@@ -35,3 +35,40 @@ func removeDuplicates_1(nums []int) int {
 	}
 	return last + 1
 }
+
+func removeDuplicates_2(nums []int) int {
+	if len(nums) == 0 {
+		return 0
+	}
+	length := len(nums)
+	lastNum := nums[length-1]
+	i := 0
+	for i = 0; i < length-1; i++ {
+		if nums[i] == lastNum {
+
+			break
+		}
+		if nums[i+1] == nums[i] {
+			removeElement(nums, i+1, nums[i])
+		}
+	}
+	return i + 1
+}
+
+func removeElement(nums []int, start, val int) int {
+	if len(nums) == 0 {
+		return 0
+	}
+	j := start
+	for i := start; i < len(nums); i++ {
+		if nums[i] != val {
+			if i != j {
+				nums[i], nums[j] = nums[j], nums[i]
+				j++
+			} else {
+				j++
+			}
+		}
+	}
+	return j
+}
