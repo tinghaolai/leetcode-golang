@@ -13,3 +13,8 @@ Memory Usage: 2 MB, less than 22.22% of Go online submissions for Excel Sheet Co
     * let's say input is 52, which div number and mod number is 2, 0
     * But in correct calculate, only the number is greater than 26 can be the carry, so it's actually 1, 26
     * Solution is to check if mod number is 0 (which means "Z") when division
+
+
+### Self solution
+
+> Basically the same but might be easier to understand by just remove the bias of each digit
